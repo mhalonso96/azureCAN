@@ -51,6 +51,7 @@ def main(myblob: InputStream):
     try:
         URL_config = f"{tmp_path}config.json"
         config = readConfig(URL_config)
+        vehicle = config[4][1]['vehicle']
         #print("Diretorio .config.json", URL_config)
         dbcCANpath = os.path.join(dbcs_path, config[5][0]['J1939']).replace("\\","/")
         #print("Diretorio dbc CAN", dbcCANpath)
@@ -68,7 +69,7 @@ def main(myblob: InputStream):
         return 
 
     try:    
-        upload_filename = f'EATON/{blob_config[1]}/{path_container_upload}/{csv_path_split[1]}'
+        upload_filename = f'EATON/{vehicle}/{blob_config[1]}/{path_container_upload}/{csv_path_split[1]}'
         upload_blob_to_azure(account_name, account_key, container_name, csv_path, upload_filename)
         logging.info(f'O arquivo {csv_path} foi gravado na {container_name} no seguinte diretorio {upload_filename}')
     except Exception as err:

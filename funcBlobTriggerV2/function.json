@@ -1,0 +1,12 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "etncanedgecontainer/{name}.MF4",
+      "connection": "etncanedgestorage_STORAGE"
+    }
+  ]
+}

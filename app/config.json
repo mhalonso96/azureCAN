@@ -1,0 +1,43 @@
+{
+    "filter_signals" : [   
+        {"signal" : "EngSpeed"},
+        {"signal" : "Latitude"},
+        {"signal" : "Longitude"},
+        {"signal" : "TransCurrentGear"},
+        {"signal" : "DistanceTrip"},
+        {"signal" : "EngReferenceTorque"},
+        {"signal" : "WheelBasedVehicleSpeed"},
+        {"signal" : "NominalFrictionPercentTorque"},
+        {"signal" : "ActualEngPercentTorque"}
+    ],
+    "filter_gps_signals":[
+        {"signal" : "Altitude"},
+        {"signal" : "Latitude"},
+        {"signal" : "Longitude"}
+              
+    ],
+    "config_s3": [
+        {"s3":false},
+        {"key": ""}, 
+        {"secret": ""},
+        {"endpoint": ""}, 
+        {"region": ""},
+        {"pw": {
+                "default": "password"
+            }
+        }
+    ],
+    "datetime": [
+        {"start": 2020},
+        {"stop": 3330}
+    ],
+    "info":[
+        {"device": "CD19636"},
+        {"vehicle": "E10"}
+    
+    ],
+    "dbc":[
+        {"J1939": "can1-J1939_NGHD_V22.dbc" },
+        {"GPS": "can9-database-01.07.dbc"}
+    ]
+}
